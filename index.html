@@ -19,6 +19,71 @@ html, body {
     background: #000;
 }
 
+
+/* ---------------- RESPONSIVE IMPROVEMENTS ---------------- */
+
+/* Video */
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Lights container adjusts on smaller screens */
+.lights-container {
+    top: 8%;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Bulbs scale on small screens */
+@media (max-width: 768px) {
+    .bulb { width: 12px; height: 20px; }
+}
+
+/* Gift box responsive */
+.gift-box {
+    width: 20vw; /* scales with viewport width */
+    max-width: 250px;
+    min-width: 120px;
+    cursor: pointer;
+    filter: drop-shadow(0 0 30px rgba(255,215,0,0.6));
+    animation: giftFloat 3s ease-in-out infinite;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@media (max-width: 600px) {
+    .gift-box { width: 40vw; max-width: 180px; }
+}
+
+/* Wish card responsive */
+#wish-card {
+    padding: 30px 20px;
+    max-width: 90%;
+}
+
+.romantic-text {
+    font-size: 4vw;
+    max-font-size: 3.5rem;
+    min-font-size: 2rem;
+}
+
+/* Letterboxes scale down on small screens */
+.letterbox {
+    height: 8%;
+}
+@media (max-width: 600px) {
+    .letterbox { height: 6%; }
+}
+
+/* Loading screen text smaller on mobile */
+@media (max-width: 600px) {
+    .loading-heart { font-size: 48px; }
+    .loading-text { font-size: 0.7rem; }
+}
+
+
 /* ---------------- LOADING SCREEN ---------------- */
 #loading-screen {
     position: fixed;
